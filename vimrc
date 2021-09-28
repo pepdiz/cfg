@@ -11,7 +11,7 @@ set smartcase
 set hlsearch
 "set incsearch
 
-set showmatch on	" jump to matching when typing (as %)
+set showmatch 	" jump to matching when typing (as %)
 "set mps+=<:>		" add < > to matchpairs
 
 "set autowrite
