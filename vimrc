@@ -73,7 +73,7 @@ nnoremap <leader>sb :vsplit _scratch_<cr>:setlocal buftype=nofile<cr>:setlocal f
 " format xml file with xmllint (only useful if xmllint installed)
 nnoremap <leader>fx :%!xmllint --format --recover -<CR>  
 " block line as header 
-nnoremap <leader>fl z<cr>:split<cr>:resize 1<cr><c-w>w   i
+nnoremap <leader>fl z<cr>:split<cr>:resize 1<cr><c-w>w
 
 " }}}
 
