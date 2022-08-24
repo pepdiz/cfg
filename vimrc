@@ -58,7 +58,7 @@ set statusline+=%y\ 				" tipo de fichero
 set statusline+=%.10{Sl_encoding()}\ 		" encoding
 set statusline+=%.7{Sl_fileformat()}\ 		" file format
 set statusline+=B-%2.2n\ 			" numero de buffer
-set statusline+=%3.3c\ :%7.7l\ /%7.7L 		" col : linea (total lineas)
+set statusline+=%3.3c\ :%6.6l\ /%6.6L 		" col : linea (total lineas)
 " }}}
 
 " mappings {{{
@@ -71,9 +71,9 @@ nnoremap <leader>xb :%y<cr>:@"<cr>
 nnoremap <leader>sb :vsplit _scratch_<cr>:setlocal buftype=nofile<cr>:setlocal filetype=vim<cr>
 
 " format xml file with xmllint (only useful if xmllint installed)
-nnoremap fx :%!xmllint --format --recover -<CR>  
+nnoremap <leader>fx :%!xmllint --format --recover -<CR>  
 " block line as header 
-nnoremap fl z<cr>:split<cr>:resize 1<cr><c-w>w   i
+nnoremap <leader>fl z<cr>:split<cr>:resize 1<cr><c-w>w   i
 
 " }}}
 
