@@ -1,0 +1,9 @@
+[user]
+	name = pepdiz
+	email = socialkuma@hotmail.com
+[core]
+	autocrlf = true
+	excludesfile = C:\\Users\\lourdes\\Documents\\gitignore_global.txt
+[gui]
+	recentrepo = C:/Users/jose/Downloads/jose/PROGRAMACION/PRJ/RE-for-beginners
+	recentrepo = C:/Users/jose/Downloads/jose/PROGRAMACION/PRJ/git/zerocat
