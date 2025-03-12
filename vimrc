@@ -58,7 +58,7 @@ set statusline+=%y\ 				" tipo de fichero
 set statusline+=%.10{Sl_encoding()}\ 		" encoding
 set statusline+=%.7{Sl_fileformat()}\ 		" file format
 set statusline+=B-%2.2n\ 			" numero de buffer
-set statusline+=%3.3c\ :%6.6l\ /%6.6L 		" col : linea (total lineas)
+set statusline+=%3.3c\ :%7.7l\ /%7.7L 		" col : linea (total lineas)
 " }}}
 
 " mappings {{{
@@ -85,4 +85,48 @@ autocmd BufWritePre,BufRead *.html :normal gg=G
 "    autocmd FileType html nnoremap <buffer> <localleader>f Vatzf
 "augroup END
 " }}}
+
+
+"colorscheme elflord
+colorscheme darkblue
+set number
+
+"-- Plugins -----
+"
+"Reload the file or restart Vim, then you can,
+"
+":PlugInstall to install the plugins
+":PlugUpdate to install or update the plugins
+":PlugDiff to review the changes from the last update
+":PlugClean to remove plugins no longer in the list
+"
+call plug#begin('~/.vim/plugged')
+
+" Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
+Plug 'godlygeek/tabular', {'for': 'markdown'}
+Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
+Plug 'ironcamel/vim-script-runner', {'for': ['sh', 'tcl']}
+Plug 'preservim/nerdtree'
+Plug 'w0rp/ale'
+
+call plug#end()
+
+
+"configure ALE plugin for shellchecks
+
+" Enable ALE
+let g:ale_linters = { 'sh': ['shellcheck'], }
+
+" Enable ALE linting on save and on text change
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 'always'
+
+" Use ALE for fixing issues
+let g:ale_fixers = { 'sh': ['shellcheck'], }
+
+" Enable ALE fixing on save
+let g:ale_fix_on_save = 1
+
+
 
