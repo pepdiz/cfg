@@ -130,6 +130,7 @@ let g:ale_fix_on_save = 1
 let g:script_runner_tcl = 'tclsh'
 
 "configure NERDTree plugin  (examples in https://github.com/preservim/nerdtree)
+"https://github.com/preservim/nerdtree/blob/master/doc/NERDTree.txt
 " Start NERDTree and put the cursor back in the other window.
 "autocmd VimEnter * NERDTree | wincmd p
 " Start NERDTree when Vim is started without file arguments.
