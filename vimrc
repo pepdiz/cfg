@@ -112,9 +112,7 @@ Plug 'w0rp/ale'
 
 call plug#end()
 
-
 "configure ALE plugin for shellchecks
-
 " Enable ALE
 let g:ale_linters = { 'sh': ['shellcheck'], }
 
@@ -128,6 +126,24 @@ let g:ale_fixers = { 'sh': ['shellcheck'], }
 " Enable ALE fixing on save
 let g:ale_fix_on_save = 1
 
-
+"configure script_runner plugin for tcl
 let g:script_runner_tcl = 'tclsh'
 
+"configure NERDTree plugin  (examples in https://github.com/preservim/nerdtree)
+" Start NERDTree and put the cursor back in the other window.
+"autocmd VimEnter * NERDTree | wincmd p
+" Start NERDTree when Vim is started without file arguments.
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+" Exit Vim if NERDTree is the only window remaining in the only tab. (vim8)
+"autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+" Close the tab if NERDTree is the only window remaining in it. (vim8)
+"autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+" show lines of files in NERDTree
+let g:NERDTreeFileLines = 1
+" hotkeys for NERDTree
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <leader>nc :NERDTreeClose<CR>
+nnoremap <leader>nt :NERDTreeToggle<CR>
+nnoremap <leader>nf :NERDTreeFind<CR>
+nnoremap <leader>nr :NERDTreeRefreshRoot<CR>
