@@ -140,8 +140,8 @@ let g:script_runner_tcl = 'tclsh'
 "autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 " Close the tab if NERDTree is the only window remaining in it. (vim8)
 "autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-" show lines of files in NERDTree
-let g:NERDTreeFileLines = 1
+" show lines of files in NERDTree (very slow)
+"let g:NERDTreeFileLines = 1
 " hotkeys for NERDTree
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <leader>nc :NERDTreeClose<CR>
